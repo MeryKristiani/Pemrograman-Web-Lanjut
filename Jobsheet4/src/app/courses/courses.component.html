@@ -1,0 +1,46 @@
+<p>
+  {{"judulnya: " + title}}
+  </p>
+  <p>
+  {{ getTitle() }}
+  </p>
+<table>
+  <thead>
+    <th>
+      #ID
+    </th>
+    <th>Course name</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Course of Courses">
+      <td>{{ Course.id }}</td>
+      <td>{{ Course.name }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>{{binding}}</h2>
+<h2 [textContent]='binding'></h2>
+
+<img src="{{imageUrl}}" />
+<img [src]="imageUrl" />
+
+<table>
+  <tr>
+    <td [attr.colspan]='colSpan'></td>
+  </tr>
+</table>
+
+<button type="button" class="btn btn-primary" [class.active]="isActive">Tambah</button>
+<button type="button" class="btn btn-primary" [style.backgroundColor]="isActive?'blue':'white'">Style</button>
+
+<button type="button" class="btn btn-default" (click)="onSave($event)">Button</button>
+
+<div (click)="onDivClick($event)">
+  <button type="button" class="btn btn-danger"
+  (click)="onSave($event)">Button</button>
+</div>
+
+<!-- <input type="text" [value]="nama" (keyup.enter)="nama = $event.target.value;onKeyUp()"> -->
+
+<input type="text" [(ngModel)] = "nama" (keyup.enter)="onKeyUp()">

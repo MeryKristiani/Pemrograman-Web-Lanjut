@@ -1,0 +1,31 @@
+<h3><p align=right>
+  Mery Kristiani - 1741720104 - TI2B
+</p></h3>
+<h1 align=center>{{title}}<br>
+{{currentDate | date:"fullDate"}}</h1>
+
+<h2>
+  {{name}}<br>
+  {{address}}<br>
+  {{hobby}}
+</h2>
+<h2><table border="1">
+  <thead>
+      <th>
+      NO
+      </th>
+      <th>
+      Hobby
+      </th>
+      <th>
+      Keterangan
+      </th>
+      </thead>
+  <tbody>
+    <tr *ngFor="let Course of TugasKedua">
+      <td>{{ Course.NO}}</td>
+      <td>{{ Course.Hobby}}</td>
+      <td>{{ Course.Keterangan}}</td>
+    </tr>
+  </tbody>
+</table></h2>
